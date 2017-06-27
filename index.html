@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Angular Pluralsight</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="col-md-12"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12" ng-controller='EventsCtrl'>
+            <div class="row" ng-repeat="event in events" >
+              <div class="col-md-4 col-sm-4 col-votes-container">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <button class="btn btn-primary" ng-click="makeVote(event, 'UP_VOTE')">
+                          <span class="glyphicon glyphicon-arrow-up"></span>
+                        </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                      {{event.votes}}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                      <button class="btn btn-danger" ng-click="makeVote(event, 'DOWN_VOTE')">
+                        <span class="glyphicon glyphicon-arrow-down"></span>
+                      </button>
+                    </div>
+                  </div>
+
+              </div>
+              <div class="col-md-8 col-sm-5 event-description-container">
+                <h3>{{event.name}}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.29/angular.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="controllers/EventsCtrl.js"></script>
+</body>
+
+</html>

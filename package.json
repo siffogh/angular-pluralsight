@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/siffogh/angular-pluralsight/issues"
   },
-  "homepage": "https://github.com/siffogh/angular-pluralsight#readme"
+  "homepage": "https://github.com/siffogh/angular-pluralsight#readme",
+  "dependencies": {
+    "angular": "^1.2.29"
+  }
 }
